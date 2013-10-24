@@ -26,7 +26,8 @@ var Publico = function (user, options) {
     createIfMissing: true,
     valueEncoding: 'json'
   }));
-  this.db = ttl(this.db, { checkFrequency: options.frequency || 10000 });
+  // Remove ttl
+  //this.db = ttl(this.db, { checkFrequency: options.frequency || 10000 });
 
   var sendChat = function (key, chat, created, options, callback) {
     var ttl = DEFAULT_TTL;
